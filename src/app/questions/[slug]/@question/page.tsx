@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import PostCard from '@/components/posts/PostCard';
 import Link from 'next/link';
+import { ArrowLeftIcon } from 'lucide-react';
 
 const SingleQuestionPage = async ({
   params,
@@ -51,7 +52,7 @@ const SingleQuestionPage = async ({
   return (
     <div className="mt-5 md:mx-[15%]">
       <Link href="/questions" className="p-4">
-        Go Back
+        <ArrowLeftIcon/>
       </Link>
       <div className="mt-3 flex items-center justify-center px-3">
         {question && (
